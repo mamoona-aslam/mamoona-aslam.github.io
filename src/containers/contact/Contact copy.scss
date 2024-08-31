@@ -1,0 +1,140 @@
+@import "../../_globalColor";
+
+.contact-div-main {
+  display: flex;
+}
+
+.dark-mode a {
+  color: $textColorDark;
+}
+
+.contact-div-main > * {
+  flex: 1;
+}
+
+.contact-title {
+  font-size: 65px;
+  font-weight: 400;
+}
+
+.contact-detail,
+.contact-detail-email {
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: 400;
+  color: $subTitle;
+  text-decoration: none;
+}
+
+.contact-detail-location {
+  margin-top: 20px;
+  font-size: 35px;
+  font-weight: 400;
+  color: $subTitle;
+}
+
+.contact-detail:hover,
+.contact-detail-email:hover {
+  color: $textColor;
+  text-shadow: 2px 1px 2px $contactDetailHoverTS;
+  transition: all 0.3s;
+}
+
+.contact-subtitle {
+  text-transform: uppercase;
+}
+
+.contact-text-div {
+  margin-top: 1.5rem;
+}
+
+.contact-margin-top {
+  margin-top: 4rem;
+}
+
+.contact-image-div {
+  position: relative;
+  display: flex;
+  justify-content: flex-end; /* Aligns the image to the right */
+  margin-left: 1.5rem;
+  margin-top: 2rem; /* Lower the image a bit for better alignment */
+
+  img {
+    width: 300px; /* Larger width for desktop */
+    height: 300px; /* Larger height for desktop */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    border: 5px solid transparent; /* Space for the border */
+    border-radius: 50%; /* Make the image circular */
+    border-color: purple; /* Purple border color */
+    box-shadow: 0px 0px 15px rgba(128, 0, 128, 0.5); /* Optional purple shadow */
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1380px) {
+  .contact-title {
+    font-size: 56px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .contact-subtitle {
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .contact-text-div {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .contact-detail,
+  .contact-detail-email {
+    font-size: 20px;
+  }
+
+  .contact-detail-location {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .contact-subtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .contact-text-div {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .contact-detail,
+  .contact-detail-email {
+    font-size: 20px;
+  }
+
+  .contact-detail-location {
+    font-size: 18px;
+  }
+
+  .contact-image-div {
+    justify-content: center; /* Center the image on smaller screens */
+    margin-left: 0;
+    margin-top: 1rem; /* Adjust margin for mobile */
+
+    img {
+      width: 150px; /* Keep the smaller width for mobile */
+      height: 150px; /* Keep the smaller height for mobile */
+      object-fit: cover; /* Ensures the image maintains its aspect ratio */
+      border-radius: 50%; /* Make the image circular */
+      margin-top: 0; /* No extra margin at the top */
+    }
+  }
+}
